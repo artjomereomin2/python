@@ -1,11 +1,9 @@
-a = list(map(int, input().split()))
-b = input()
-c = float(input())
-d = True
-e = None
-simple = dict(list=a,
-              text=b,
-              number=c,
-              boolean=d,
-              none=e)
-print(simple)
+import json
+data = {
+    "president": {
+        "Фамилия": "Путин",
+        "Страна": "Россия"
+    }
+}
+with open("data_file.json", "w") as write_file:
+    json.dump(data, write_file)
